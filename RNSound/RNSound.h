@@ -14,4 +14,6 @@
 
 @interface RNSound : RCTEventEmitter <RCTBridgeModule, AVAudioPlayerDelegate>
 @property (nonatomic, weak) NSNumber *_key;
+@property (nonatomic, assign) double limitSeconds;
+@property (nonatomic, strong) dispatch_source_t limitTimer;
 @end
